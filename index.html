@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Tony Svanström</title>
+	<meta name="robots" content="noodp, noydir, noarchive">
+	<meta name="keywords" content="Tony Svanström, Svanstrom, Tony Svanstrom, Tony, Svanström">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:url" content="http://svanstrom.com/">
+	<meta property="og:image" content="http://svanstrom.com/tony.jpg">
+	<meta name="author" content="Tony Svanström">
+	<meta property="og:type" content="profile">
+	<meta property="og:title" content="Tony Svanström">
+	<meta property="fb:profile_id" content="svanstrom">
+	<meta property="fb:admins" content="1220648229">
+	<meta property="og:description" content="Old school nerd.">
+	<link rel="author" href="https://plus.google.com/105446194092252338064">
+	<link rel="publisher" href="https://plus.google.com/104615405245881871178">
+<script>
+	function dateDiffInDays(a, b) {
+		var utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+		var utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+		return Math.floor((utc2 - utc1) / (1000 * 60 * 60 * 24));
+	}
+	function imgViewer(x) {
+		div = document.createElement("div");
+		div.onclick = function(e) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; };
+		div.oncontextmenu = function(e) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; };
+		div.ondragstart = function(e) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; }
+		div.onselect = function(e) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; }
+		div.onclick = function(e) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; }
+		div.onkeydown = function(e) { if (e.keyCode == 27) { e.preventDefault(); div.remove(); document.documentElement.style.overflow = 'auto'; } }
+		div.style.cssText = 'background: rgba(0,0,0,.8) url(' + x.src +  '); background-size: contain; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-position: 50% 50%;';
+		document.documentElement.style.overflow = 'hidden';
+		div.tabIndex = "-1";
+		div.style.zIndex = 2147483648;
+		document.body.appendChild(div);
+		div.focus();
+	}
+	window.addEventListener('load', function() {
+		const timeAll = [...document.getElementsByTagName('time')];
+		timeAll.forEach((x) => {
+			x.parentNode.parentNode.style.order = -(new Date(x.dateTime).getTime()) / 1000;
+			x.innerText = dateDiffInDays(new Date(x.dateTime), new Date()) + ' days ago';
+		});
+	}, false);
+
+	window.addEventListener('load', function() {
+		const imgAll = [...document.getElementsByTagName('img')];
+		imgAll.forEach((x) => {
+			x.oncontextmenu = function(e) { e.preventDefault(); imgViewer(x); };
+			x.ondragstart = function(e) { e.preventDefault(); imgViewer(x); };
+			x.onselect = function(e) { e.preventDefault(); imgViewer(x); };
+			x.onfocus = function(e) { e.preventDefault(); imgViewer(x); };
+			x.onclick = function(e) { e.preventDefault(); imgViewer(x); };
+		});
+	}, false);
+</script>
+
+<style>
+	img				{ -webkit-touch-callout: none; user-select: none; }
+	::selection		{ background: cyan; }
+
+	html			{ display: flex; min-width: 100%; min-height: 100%; align-items: center; justify-content: center; background: black; overflow: auto; color: #ddd; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; margin: auto; padding: 0; font-size: 1rem; text-align: center; padding: 1ch; box-sizing: border-box; }
+	body			{ max-width: 30ch; }
+
+	h1				{ font-size: 8.5rem; margin: 0 auto 2rem auto; width: 1em; height: 1em; line-height: 1em; border-radius: 50%; border: .2rem solid grey; box-shadow: inset 0 0 0 .1rem black; background-image: url('./tony.jpg'); background-size: cover; background-position: 50% 50%; }
+	hr				{ margin: 2rem auto 2rem auto; width: 5ch; display: none; }
+	article			{ te.xt-align: left; }
+	img				{ width: 100%; max-height: 20ch; object-fit: cover; object-position: 50% 100% }
+	a				{ color: inherit; text-decoration: none; color: #999; }
+	a:before		{ content: '<'; }
+	a:after			{ content: '>'; }
+</style>
+</head>
+<body>
+	<h1></h1>
+	<hr>
+	<article><time datetime="2018-03-13T11:27">2018-06-06</time>: Temporary website created.<a href="mailto:tony@svanstrom.com">tony@svanstrom.com</a></article>
+</body></html>
